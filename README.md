@@ -27,7 +27,7 @@ The full programme, block by block, is in the **[syllabus](syllabus.md)**.
 | Folder | Contents |
 |---|---|
 | [`slideshow/`](slideshow/) | slides of the lessons (PDF) |
-| [`max/`](max/) | patches of the exercises |
+| `max/` | patches of the exercises (from block 1 on) |
 | [`resources/`](resources/) | papers to read |
 
 Materials are added block by block during the semester.
