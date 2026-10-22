@@ -19,15 +19,15 @@ Prof. Dr. Alessandro Anatrini
 
 ## Approach
 
-- **Sensors before symbols.** The course starts with interactive machine learning (Fiebrink): a model is trained in Max on a few examples recorded live, in a few seconds. Features, targets, regression, classification and overfitting become concrete at once, and the first lesson already ends with a working instrument.
-- **Every block ends in Max.** Pd and plugdata are used in parallel where the externals exist; otherwise through Wekinator or OSC.
-- **Python as a bridge, not as a subject.** Students do not write PyTorch. They receive ready-made scripts that run a model and talk to Max over OSC. Python code is shown to explain what happens inside a model, not written together.
-- **Audry as a guide.** The division *training / model / data* of Audry's book organises the course: blocks 1–2 (data and training, with your own body), block 3 (models for sequences), block 4 (latent spaces), block 5 (data as a critical question).
-- **Train first, then generate.** First you train a model with your own body, then you use models that generate sequences, then models that generate sound. Block 4 closes the circle: the sensor of block 1 controls the latent space of RAVE.
+- **We start with sensors, not with notes.** In the first block you train a model in Max with a few examples you record yourself, which takes seconds. This is the quickest way to see what features, targets, regression, classification and overfitting mean, and the first lesson ends with an instrument you can play.
+- **Every block ends with a patch in Max.** Pd and plugdata are used alongside wherever the externals exist; otherwise Wekinator or OSC fill the gap.
+- **You use Python, you do not write it.** The scripts are ready-made: they run a model and send the results to Max over OSC. Code is sometimes shown in class to explain what a model does inside.
+- **The course follows Audry's book.** The book looks at machine learning through training, model and data, and so does the course: blocks 1–2 deal with data and training, using your own body; block 3 with models for sequences; block 4 with latent spaces; block 5 with data as a critical question.
+- **First training, then generating.** You first train a model with your own movements, then use models that generate sequences of notes, and finally models that generate sound. In block 4 the phone or the hand from block 1 controls a RAVE model.
 
 ## Format
 
-Five blocks of half a day or a whole day. Roughly **30% theory, 60% lab, 10% listening and discussion**. The lab is never left for the end.
+Five blocks, each half a day or a whole day. Roughly 30% theory, 60% lab work, 10% listening and discussion. Lab work comes early in each block, not at the end.
 
 ## Overview of the five blocks
 
@@ -49,7 +49,7 @@ Five blocks of half a day or a whole day. Roughly **30% theory, 60% lab, 10% lis
 - How a network learns: one weight computed by hand, learning rate, scaling of the inputs, backpropagation, hidden layers, validation, overfitting.
 - Interactive machine learning: Wekinator, Laetitia Sonami. FluCoMa in Max.
 
-**Exercise 1 · Tilt and timbre.** The tilt of a phone, sent over OSC, controls an FM synthesiser through a neural network (`fluid.mlpregressor~`). You record a few positions of the phone with a sound for each, train, and play. In Pd and plugdata: FluCoMa for Pd, or Wekinator as a separate application.
+**Exercise 1 · Tilt and timbre.** The tilt of a phone, sent over OSC, controls an FM synthesiser through a neural network (`fluid.mlpregressor~`). You record a few positions of the phone, each with its own sound, train the network, and play. In Pd and plugdata: FluCoMa for Pd, or Wekinator as a separate application.
 
 **You need:** Max 9 with FluCoMa (Package Manager), or Pd / plugdata; a phone with an OSC app (ZIG SIM, GyrOSC, Sensors2OSC or TouchOSC). Phone and computer on the same network.
 
@@ -64,8 +64,8 @@ Five blocks of half a day or a whole day. Roughly **30% theory, 60% lab, 10% lis
 - What MediaPipe and YOLO compute: 21 points of a hand, 33 of a body, boxes and classes of objects and people. The datasets behind them.
 - Features from the points: coordinates relative to the wrist, scaling, distances, velocity.
 - Classification with nearest neighbours.
-- Dimensionality reduction: 63 numbers → 2 with PCA and UMAP, a map of hand shapes. It prepares the latent spaces of block 4.
-- Gestures in time: dynamic time warping, gesture following with MuBu (IRCAM). Sequential data lead to block 3.
+- Dimensionality reduction: 63 numbers reduced to 2 with PCA and UMAP, giving a map of hand shapes. The same idea comes back with latent spaces in block 4.
+- Gestures in time: dynamic time warping, gesture following with MuBu (IRCAM). A gesture is a sequence, which leads to block 3.
 
 **Exercise 2 · A hand in front of the camera.** A Python script (MediaPipe) tracks a hand in the webcam image and sends its 21 points to Max over OSC. Three independent parts:
 
@@ -81,14 +81,14 @@ Alternative to Python: the MediaPipe plugin for TouchDesigner.
 
 ## Block 3 · Learning sequences
 
-From mapping to **generating**: predicting the next event.
+Moving from mapping to generating: a model predicts the next event.
 
 **Topics**
 
 - MIDI as data: pitch, onset, duration, velocity; piano roll and sequence of events.
 - Markov chains: transition probabilities, order 1, 2 and n.
 - RNN, LSTM and GRU: unfolding in time, shared parameters, autoregression.
-- Sampling: temperature and top-k; why the same network sounds dull or chaotic.
+- Sampling: temperature and top-k; why the same network can sound dull or chaotic.
 - Transformers: attention over the whole sequence; recent open symbolic models, such as the Anticipatory Music Transformer (2023).
 
 **Lab**
@@ -102,7 +102,7 @@ From mapping to **generating**: predicting the next event.
 
 ## Block 4 · Latent spaces
 
-From symbols to sound: a model that compresses sound into a few numbers and rebuilds it.
+Moving from notes to sound: a model that compresses sound into a few numbers and rebuilds it.
 
 **Topics**
 
@@ -116,7 +116,7 @@ From symbols to sound: a model that compresses sound into a few numbers and rebu
 
 1. `nn~` in Max with pretrained RAVE models: timbre transfer from the microphone or a file.
 2. Encoder and decoder separately: change the latent dimensions (offset, scale, noise) between them.
-3. Sensor → latent space: the neural network of Exercise 1 maps poses of the phone or the hand to latent vectors. This exercise ties the semester together.
+3. Sensor → latent space: the neural network of Exercise 1 maps poses of the phone or the hand to latent vectors. This exercise brings together the work of the whole semester.
 
 **You need:** `nn~` (Max or Pd) and the pretrained models indicated in class.
 
