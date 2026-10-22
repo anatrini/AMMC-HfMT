@@ -35,7 +35,7 @@ Each semester is organised in blocks of half a day or a full day, about one per 
 
 ## Software
 
-The main environment is [Max 9](https://cycling74.com/downloads); [Pd](https://puredata.info) and [plugdata](https://plugdata.org) are supported wherever the required libraries exist. The course uses FluCoMa, MuBu, MediaPipe, YOLO and `nn~`, among others; the syllabus lists each tool with the block in which it is introduced. Installation instructions accompany each exercise.
+The course is based on [Max 9](https://cycling74.com/downloads), or alternatively [Pd](https://puredata.info) and [plugdata](https://plugdata.org), together with [TouchDesigner](https://derivative.ca/download) and [ComfyUI](https://www.comfy.org/download).
 
 ## Repository
 
