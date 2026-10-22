@@ -1,0 +1,26 @@
+# macOS
+.DS_Store
+._*
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# models downloaded by the scripts
+*.task
+*.pt
+*.ts
+
+# LaTeX build files
+*.aux
+*.log
+*.nav
+*.out
+*.snm
+*.toc
+*.synctex.gz
+
+# editors
+.vscode/
+.idea/
