@@ -72,6 +72,8 @@ bridge/.venv/bin/python bridge/body2osc.py
 - the patch is saved (an unsaved patch runs commands from your home folder);
 - the `bridge` folder stays next to the patch.
 
+The patch also uses `ex2.hand-features.maxpat`, a separate patch that turns the 21 points into hand-shape features. Keep it in the same folder as `261023_handPoses.maxpat`, otherwise Max cannot find it.
+
 Save the patch.
 
 ## Using the patch
