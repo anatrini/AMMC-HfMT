@@ -13,17 +13,6 @@
         "boxes": [
             {
                 "box": {
-                    "id": "obj-109",
-                    "linecount": 2,
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 350.0, 195.5, 102.0, 33.0 ],
-                    "text": "EDIT WITH YOUR PATHS!!!"
-                }
-            },
-            {
-                "box": {
                     "id": "obj-119",
                     "maxclass": "newobj",
                     "numinlets": 1,
@@ -56,13 +45,12 @@
             {
                 "box": {
                     "id": "obj-112",
-                    "linecount": 4,
                     "maxclass": "message",
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 79.0, 121.0, 371.0, 62.0 ],
-                    "text": "/Users/anatrini/Documents/in_progress/notteRicerca26/td-yolo/bin/python /Users/anatrini/Documents/dev/Artificial-Models-Music-Creativity/max/exercise2/bridge/body2osc.py"
+                    "patching_rect": [ 79.0, 121.0, 265.0, 22.0 ],
+                    "text": "bridge/.venv/bin/python bridge/body2osc.py"
                 }
             },
             {
@@ -556,7 +544,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 483.0, 687.0, 400.0, 33.0 ],
+                    "patching_rect": [ 483.0, 687.0, 401.0, 33.0 ],
                     "text": "Click 'train' after recording or changing examples. Training only stores the examples: it takes no time."
                 }
             },
