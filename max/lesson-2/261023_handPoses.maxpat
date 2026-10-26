@@ -732,9 +732,20 @@
                     "maxclass": "newobj",
                     "numinlets": 1,
                     "numoutlets": 1,
-                    "outlettype": [ "buffer" ],
-                    "patching_rect": [ 945.0, 173.0, 288.0, 22.0 ],
-                    "text": "fluid.list2buf @destination ex2a.live @autosize 0"
+                    "outlettype": [ "bang" ],
+                    "patching_rect": [ 945.0, 173.0, 40.0, 22.0 ],
+                    "text": "t b"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-121",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 2,
+                    "outlettype": [ "float", "bang" ],
+                    "patching_rect": [ 1185.0, 229.0, 178.0, 22.0 ],
+                    "text": "buffer~ ex2a.live.n @samps 63"
                 }
             },
             {
@@ -745,7 +756,7 @@
                     "numoutlets": 1,
                     "outlettype": [ "" ],
                     "patching_rect": [ 945.0, 201.0, 216.0, 22.0 ],
-                    "text": "transformpoint ex2a.live ex2a.live.n"
+                    "text": "transformpoint ex2a.point ex2a.live.n"
                 }
             },
             {
