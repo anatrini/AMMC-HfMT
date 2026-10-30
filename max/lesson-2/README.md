@@ -8,7 +8,7 @@ Three patches, one for each part of Exercise 2:
 | `B-261023-hand-map.maxpat` | draws a map of hand shapes (`fluid.umap~`) and plays the point of the map where your hand is |
 | `C-261023-gesture-follower.maxpat` | follows a gesture of the fingertip while it happens, and plays it as a sound (`mubu.hhmm`) |
 
-In all three, the hand is tracked by a Python script, `bridge/body2osc.py`, which uses MediaPipe and sends the 21 points of one hand to Max over OSC (port 9001). Each patch starts and stops the script itself, with the `spawn` object.
+In all three, the hand is tracked by a Python script, `code/bridge/body2osc.py` (in the `code` folder at the top of the course repository), which uses MediaPipe and sends the 21 points of one hand to Max over OSC (port 9001). Each patch starts and stops the script itself, with the `spawn` object.
 
 You need:
 
@@ -51,61 +51,61 @@ uv --version
 
 ## 3. Install the libraries of the script
 
-In the Terminal, go to the `bridge` folder. Type `cd ` (with a space), drag the `bridge` folder from the Finder into the Terminal window, and press Enter. Then run:
+In the Terminal, go to the folder `code/bridge` of the course repository. Type `cd ` (with a space), drag the `bridge` folder (inside `code`) from the Finder into the Terminal window, and press Enter. Then run:
 
 ```
 uv venv --managed-python --python 3.12
 uv pip install -r requirements.txt
 ```
 
-The first line creates the folder `bridge/.venv` with its own Python 3.12. The second installs MediaPipe and python-osc into it (about 340 MB). If something goes wrong, delete the `.venv` folder and run both lines again.
+The first line creates the folder `code/bridge/.venv` with its own Python 3.12. The second installs MediaPipe and python-osc into it (about 340 MB). If something goes wrong, delete the `.venv` folder and run both lines again.
 
-To test the script on its own, from the `bridge` folder:
+To test the script on its own, from the `code/bridge` folder:
 
 ```
 .venv/bin/python body2osc.py
 ```
 
-A window shows the camera image with the points of the hand. Press `q` in that window to stop. The first time, the script downloads the MediaPipe model (`hand_landmarker.task`, about 8 MB) into `bridge/`.
+A window shows the camera image with the points of the hand. Press `q` in that window to stop. The first time, the script downloads the MediaPipe model (`hand_landmarker.task`, about 8 MB) into `code/bridge/`.
 
 ## 4. Check the command in the patch
 
 In each of the three patches, the message box connected to `spawn` contains the command that starts the script:
 
 ```
-bridge/.venv/bin/python bridge/body2osc.py
+../../code/bridge/.venv/bin/python ../../code/bridge/body2osc.py
 ```
 
 It has two parts, separated by a space:
 
-1. `bridge/.venv/bin/python` is the Python of the environment created in step 3. The script must run with this Python, because only this one has MediaPipe and python-osc installed.
-2. `bridge/body2osc.py` is the script.
+1. `../../code/bridge/.venv/bin/python` is the Python of the environment created in step 3. The script must run with this Python, because only this one has MediaPipe and python-osc installed.
+2. `../../code/bridge/body2osc.py` is the script.
 
-`spawn` runs commands from the folder of the patch, so these short paths are relative to the folder that contains the patches. **If you followed step 3 exactly, you do not need to change anything.** The command works as long as:
+`spawn` runs commands from the folder of the patch, so these paths are relative to the folder that contains the patches (`max/lesson-2`): `../../` goes up two folders, to the top of the course repository, and from there into `code/bridge`. **If you followed step 3 exactly, you do not need to change anything.** The command works as long as:
 
 - the patch is saved (an unsaved patch runs commands from your home folder);
-- the `bridge` folder stays next to the patches;
-- the environment is `bridge/.venv`, created in step 3.
+- the patches stay in `max/lesson-2` and the script in `code/bridge`, as in the course repository;
+- the environment is `code/bridge/.venv`, created in step 3.
 
 **If your environment is somewhere else**, for example because you created it in another folder or you use an environment you already had, replace the first part with the full path of its Python. To find it:
 
 1. In the Finder, open the environment folder, then its `bin` folder.
 2. Drag the file `python` into a Terminal window: the Terminal shows its full path, for example `/Users/anna/envs/hands/bin/python`.
-3. Unlock each patch and write that path in its message box, in place of `bridge/.venv/bin/python`. Leave the second part as it is:
+3. Unlock each patch and write that path in its message box, in place of `../../code/bridge/.venv/bin/python`. Leave the second part as it is:
 
    ```
-   /Users/anna/envs/hands/bin/python bridge/body2osc.py
+   /Users/anna/envs/hands/bin/python ../../code/bridge/body2osc.py
    ```
 
 4. If the path contains spaces, put it in quotes:
 
    ```
-   "/Users/anna/My Envs/hands/bin/python" bridge/body2osc.py
+   "/Users/anna/My Envs/hands/bin/python" ../../code/bridge/body2osc.py
    ```
 
 5. Save the patches.
 
-The environment must have Python 3.12 and the libraries in `bridge/requirements.txt` installed. Do not use the Python of the system (`python3`): it does not have these libraries.
+The environment must have Python 3.12 and the libraries in `code/bridge/requirements.txt` installed. Do not use the Python of the system (`python3`): it does not have these libraries.
 
 Patches A and B also use `ex2.hand-features.maxpat`, a separate patch that turns the 21 points into hand-shape features. Keep it in the same folder as the patches, otherwise Max cannot find it.
 
@@ -154,7 +154,7 @@ The model sees only where the fingertip is in the image. Choose gestures that ar
 ## Problems
 
 - **`spawn` cannot be found, or "developer cannot be verified"**: check step 1, especially the `xattr` command, and restart Max.
-- **`No such file or directory`**: the patch is not saved, `bridge` is not next to it, or the Python in the command does not exist: step 3 was not done (`bridge/.venv` is missing), or the path of your own environment is wrong (see step 4).
+- **`No such file or directory`**: the patch is not saved, the patches or `code/bridge` were moved out of their place in the course repository, or the Python in the command does not exist: step 3 was not done (`code/bridge/.venv` is missing), or the path of your own environment is wrong (see step 4).
 - **`ModuleNotFoundError: No module named …`**: the command uses a Python without the libraries of the script. Use the Python of the environment from step 3 (see step 4).
 - **`not authorized to capture video`**: Max has no permission to use the camera (see point 2 above).
 - **The camera window opens but Max receives nothing**: another program is using port 9001, for example another exercise patch.
