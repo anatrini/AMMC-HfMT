@@ -9,7 +9,7 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 1894.0, 162.0, 1412.0, 959.0 ],
+        "rect": [ 633.0, 271.0, 1412.0, 848.0 ],
         "boxes": [
             {
                 "box": {
@@ -49,8 +49,8 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 79.0, 121.0, 265.0, 22.0 ],
-                    "text": "bridge/.venv/bin/python bridge/body2osc.py"
+                    "patching_rect": [ 79.0, 121.0, 339.0, 22.0 ],
+                    "text": "../../code/bridge/.venv/bin/python ../../code/bridge/body2osc.py"
                 }
             },
             {

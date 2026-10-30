@@ -9,7 +9,7 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 1885.0, 249.0, 1395.0, 815.0 ],
+        "rect": [ 83.0, 133.0, 1395.0, 815.0 ],
         "boxes": [
             {
                 "box": {
@@ -40,7 +40,7 @@
                     "numinlets": 1,
                     "numoutlets": 2,
                     "outlettype": [ "", "int" ],
-                    "patching_rect": [ 161.66666666666669, 151.0, 103.33333333333333, 22.0 ],
+                    "patching_rect": [ 161.66666666666669, 171.0, 103.33333333333333, 22.0 ],
                     "text": "spawn"
                 }
             },
@@ -50,7 +50,7 @@
                     "maxclass": "newobj",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 246.66666666666669, 181.0, 75.0, 22.0 ],
+                    "patching_rect": [ 246.66666666666669, 201.0, 75.0, 22.0 ],
                     "text": "print running"
                 }
             },
@@ -60,19 +60,20 @@
                     "maxclass": "newobj",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 161.66666666666669, 181.0, 72.0, 22.0 ],
+                    "patching_rect": [ 161.66666666666669, 201.0, 72.0, 22.0 ],
                     "text": "print tracker"
                 }
             },
             {
                 "box": {
                     "id": "obj-112",
+                    "linecount": 2,
                     "maxclass": "message",
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 197.66666666666669, 114.0, 265.0, 22.0 ],
-                    "text": "bridge/.venv/bin/python bridge/body2osc.py"
+                    "patching_rect": [ 197.66666666666669, 114.0, 247.33333333333331, 35.0 ],
+                    "text": "../../code/bridge/.venv/bin/python ../../code/bridge/body2osc.py"
                 }
             },
             {
@@ -490,7 +491,7 @@
                     "cursor_symbolwidth": 3.0,
                     "cursor_visible": 1,
                     "dirtypatcher": 1,
-                    "domain_bounds": [ 0.0, 5166.666666666667 ],
+                    "domain_bounds": [ 0.0, 1.0 ],
                     "domainruler_bgcolor": [ 0.235, 0.235, 0.235, 1.0 ],
                     "domainruler_bgcolordefault": 1,
                     "domainruler_fgcolor": [ 0.85, 0.85, 0.85, 1.0 ],
