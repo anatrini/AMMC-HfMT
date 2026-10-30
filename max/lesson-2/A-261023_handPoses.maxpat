@@ -9,8 +9,74 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 633.0, 271.0, 1412.0, 848.0 ],
+        "rect": [ 66.0, 101.0, 1097.0, 848.0 ],
         "boxes": [
+            {
+                "box": {
+                    "id": "obj-127",
+                    "maxclass": "newobj",
+                    "numinlets": 2,
+                    "numoutlets": 2,
+                    "outlettype": [ "", "" ],
+                    "patching_rect": [ 945.0, 551.0, 60.0, 22.0 ],
+                    "text": "zl change"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-109",
+                    "maxclass": "newobj",
+                    "numinlets": 2,
+                    "numoutlets": 2,
+                    "outlettype": [ "bang", "" ],
+                    "patching_rect": [ 1089.0, 476.0, 55.0, 22.0 ],
+                    "text": "sel 1"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-108",
+                    "maxclass": "newobj",
+                    "numinlets": 2,
+                    "numoutlets": 2,
+                    "outlettype": [ "", "" ],
+                    "patching_rect": [ 945.0, 514.0, 68.0, 22.0 ],
+                    "text": "zl reg"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-80",
+                    "maxclass": "newobj",
+                    "numinlets": 2,
+                    "numoutlets": 2,
+                    "outlettype": [ "", "" ],
+                    "patching_rect": [ 1089.0, 449.0, 68.0, 22.0 ],
+                    "text": "zl len"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-79",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 2,
+                    "outlettype": [ "", "" ],
+                    "patching_rect": [ 1048.0, 422.0, 60.0, 22.0 ],
+                    "text": "t l l"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-78",
+                    "maxclass": "newobj",
+                    "numinlets": 2,
+                    "numoutlets": 2,
+                    "outlettype": [ "", "" ],
+                    "patching_rect": [ 1048.0, 387.0, 40.0, 22.0 ],
+                    "text": "zl thin"
+                }
+            },
             {
                 "box": {
                     "id": "obj-119",
@@ -864,7 +930,7 @@
                     "numinlets": 2,
                     "numoutlets": 2,
                     "outlettype": [ "", "" ],
-                    "patching_rect": [ 945.0, 369.0, 76.0, 22.0 ],
+                    "patching_rect": [ 945.0, 369.0, 67.0, 22.0 ],
                     "text": "zl.stream 5"
                 }
             },
@@ -886,7 +952,8 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 1185.0, 369.0, 70.0, 22.0 ]
+                    "patching_rect": [ 1185.0, 369.0, 70.0, 22.0 ],
+                    "text": "point"
                 }
             },
             {
@@ -901,88 +968,11 @@
             },
             {
                 "box": {
-                    "id": "obj-75",
-                    "maxclass": "newobj",
-                    "numinlets": 1,
-                    "numoutlets": 2,
-                    "outlettype": [ "", "" ],
-                    "patching_rect": [ 945.0, 397.0, 160.0, 22.0 ],
-                    "text": "t l l"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-76",
-                    "maxclass": "newobj",
-                    "numinlets": 2,
-                    "numoutlets": 2,
-                    "outlettype": [ "", "" ],
-                    "patching_rect": [ 945.0, 425.0, 64.0, 22.0 ],
-                    "text": "zl.unique"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-77",
-                    "maxclass": "newobj",
-                    "numinlets": 2,
-                    "numoutlets": 2,
-                    "outlettype": [ "", "" ],
-                    "patching_rect": [ 1100.0, 425.0, 70.0, 22.0 ],
-                    "text": "zl.slice 1"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-78",
-                    "maxclass": "newobj",
-                    "numinlets": 2,
-                    "numoutlets": 2,
-                    "outlettype": [ "", "" ],
-                    "patching_rect": [ 945.0, 453.0, 48.0, 22.0 ],
-                    "text": "zl.len"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-79",
-                    "maxclass": "newobj",
-                    "numinlets": 2,
-                    "numoutlets": 2,
-                    "outlettype": [ "bang", "" ],
-                    "patching_rect": [ 945.0, 481.0, 42.0, 22.0 ],
-                    "text": "sel 1"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-80",
-                    "maxclass": "newobj",
-                    "numinlets": 2,
-                    "numoutlets": 2,
-                    "outlettype": [ "", "" ],
-                    "patching_rect": [ 945.0, 509.0, 100.0, 22.0 ],
-                    "text": "zl.reg"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-81",
-                    "maxclass": "newobj",
-                    "numinlets": 2,
-                    "numoutlets": 2,
-                    "outlettype": [ "", "" ],
-                    "patching_rect": [ 945.0, 537.0, 64.0, 22.0 ],
-                    "text": "zl.change"
-                }
-            },
-            {
-                "box": {
                     "id": "obj-82",
                     "maxclass": "newobj",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 945.0, 565.0, 81.0, 22.0 ],
+                    "patching_rect": [ 945.0, 588.0, 81.0, 22.0 ],
                     "text": "s ex2a.label"
                 }
             },
@@ -992,7 +982,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1035.0, 565.0, 90.0, 20.0 ],
+                    "patching_rect": [ 1035.0, 589.0, 90.0, 20.0 ],
                     "text": "to section 5"
                 }
             },
@@ -1084,7 +1074,8 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 673.0, 145.0, 60.0, 22.0 ]
+                    "patching_rect": [ 673.0, 145.0, 60.0, 22.0 ],
+                    "text": "point"
                 }
             },
             {
@@ -1274,7 +1265,7 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [ 945.0, 661.1666666666665, 405.0, 154.0 ],
-                    "text": "1. Audio on (section 5). Start the tracker; the 63 sliders move with your hand.\n2. For each label: choose it, hold the pose, click 'add example' 5-10 times, moving the hand a little between clicks.\n3. Click 'train'.\n4. Switch on 'play'. Wrong answers: add examples of the pose that should have been recognised, click 'train' again.\n\nVariations: k = 1 and 10; record without the 'rest' label; another person's hand. New labels: add them to the menu, to route and to the preload message."
+                    "text": "1. Audio on (section 2). Start the tracker; the 63 sliders move with your hand.\n2. For each label: choose it, hold the pose, click 'add example' 5-10 times, moving the hand a little between clicks.\n3. Click 'train'.\n4. Switch on 'play'. Wrong answers: add examples of the pose that should have been recognised, click 'train' again.\n\nVariations: k = 1 and 10; record without the 'rest' label; another person's hand. New labels: add them to the menu, to route and to the preload message."
                 }
             }
         ],
@@ -1307,6 +1298,18 @@
             },
             {
                 "patchline": {
+                    "destination": [ "obj-127", 0 ],
+                    "source": [ "obj-108", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-108", 0 ],
+                    "source": [ "obj-109", 0 ]
+                }
+            },
+            {
+                "patchline": {
                     "destination": [ "obj-119", 0 ],
                     "source": [ "obj-110", 0 ]
                 }
@@ -1327,6 +1330,12 @@
                 "patchline": {
                     "destination": [ "obj-116", 0 ],
                     "source": [ "obj-119", 1 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-82", 0 ],
+                    "source": [ "obj-127", 0 ]
                 }
             },
             {
@@ -1589,7 +1598,7 @@
             },
             {
                 "patchline": {
-                    "destination": [ "obj-75", 0 ],
+                    "destination": [ "obj-78", 0 ],
                     "source": [ "obj-71", 0 ]
                 }
             },
@@ -1601,50 +1610,26 @@
             },
             {
                 "patchline": {
-                    "destination": [ "obj-76", 0 ],
-                    "source": [ "obj-75", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-77", 0 ],
-                    "source": [ "obj-75", 1 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-78", 0 ],
-                    "source": [ "obj-76", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-80", 1 ],
-                    "source": [ "obj-77", 0 ]
-                }
-            },
-            {
-                "patchline": {
                     "destination": [ "obj-79", 0 ],
                     "source": [ "obj-78", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "destination": [ "obj-80", 0 ],
+                    "destination": [ "obj-108", 1 ],
                     "source": [ "obj-79", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "destination": [ "obj-81", 0 ],
-                    "source": [ "obj-80", 0 ]
+                    "destination": [ "obj-80", 0 ],
+                    "source": [ "obj-79", 1 ]
                 }
             },
             {
                 "patchline": {
-                    "destination": [ "obj-82", 0 ],
-                    "source": [ "obj-81", 0 ]
+                    "destination": [ "obj-109", 0 ],
+                    "source": [ "obj-80", 0 ]
                 }
             },
             {

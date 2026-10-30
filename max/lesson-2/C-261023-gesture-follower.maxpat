@@ -9,7 +9,7 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 83.0, 133.0, 1395.0, 815.0 ],
+        "rect": [ 55.0, 115.0, 1080.0, 815.0 ],
         "boxes": [
             {
                 "box": {
@@ -491,7 +491,7 @@
                     "cursor_symbolwidth": 3.0,
                     "cursor_visible": 1,
                     "dirtypatcher": 1,
-                    "domain_bounds": [ 0.0, 1.0 ],
+                    "domain_bounds": [ 0.0, 5200.0 ],
                     "domainruler_bgcolor": [ 0.235, 0.235, 0.235, 1.0 ],
                     "domainruler_bgcolordefault": 1,
                     "domainruler_fgcolor": [ 0.85, 0.85, 0.85, 1.0 ],
@@ -840,7 +840,7 @@
                     "numinlets": 0,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 960.0, 137.0, 81.0, 22.0 ],
+                    "patching_rect": [ 960.0, 127.0, 81.0, 22.0 ],
                     "text": "r ex2c.model"
                 }
             },
@@ -872,7 +872,7 @@
                     "numinlets": 2,
                     "numoutlets": 2,
                     "outlettype": [ "", "" ],
-                    "patching_rect": [ 960.0, 167.0, 76.0, 22.0 ],
+                    "patching_rect": [ 960.0, 156.0, 76.0, 22.0 ],
                     "text": "route model"
                 }
             },
